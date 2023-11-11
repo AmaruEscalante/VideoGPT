@@ -8,17 +8,32 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "-s", "--split", help="Path to the JSON file with train test splits", required=True
 )
+parser.add_argument(
+    "-b", "--base", help="Path to the directory where videos are stored", required=True
+)
+parser.add_argument(
+    "-t",
+    "--train",
+    help="Path to the directory where train videos are stored",
+    required=True,
+)
+parser.add_argument(
+    "-v",
+    "--val",
+    help="Path to the directory where val videos are stored",
+    required=True,
+)
 args = parser.parse_args()
 
 # Path to the JSON file
 json_file_path = args.split
 
 # Base directory where videos are stored
-base_dir = "datasets/MSRVTT/videos/all"
+base_dir = args.base
 
 # Directories for train and test splits
-train_dir = "datasets/msrvtt/train"
-test_dir = "datasets/msrvtt/test"
+train_dir = args.train
+test_dir = args.val
 
 # Create train and test directories if they don't exist
 os.makedirs(train_dir, exist_ok=True)
