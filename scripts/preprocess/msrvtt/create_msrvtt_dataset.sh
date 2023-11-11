@@ -17,14 +17,14 @@ fi
 
 # # Download MSRVTT video files
 wget --no-check-certificate -P ${1} https://www.robots.ox.ac.uk/~maxbain/frozen-in-time/data/MSRVTT.zip
-unzip ${1}/MSRVTT.zip -d ${1}/MSRVTT
+unzip ${1}/MSRVTT.zip -d ${1}
 rm ${1}/MSRVTT.zip
 
 # Download train/test splits - train_val_videodatainfo.json
 python scripts/preprocess/download.py -gfile https://drive.google.com/file/d/1uo1mNbhDLNB46Wps5rrhuo7QyGBS1w_l/view\?usp\=sharing
 
 # Move video files into train / test directories based on train/test split
-python scripts/preprocess/msrvtt/msrvtt_split_train_test.py --split train_val_videodatainfo.json
+python scripts/preprocess/msrvtt/msrvtt_split_train_test.py --split train_val_videodatainfo.json --base datasets/msrvtt/MSRVTT/videos/all --train datasets/msrvtt/train --val datasets/msrvtt/test
 
 # # Delete leftover files
 rm -r ${1}/MSRVTT
