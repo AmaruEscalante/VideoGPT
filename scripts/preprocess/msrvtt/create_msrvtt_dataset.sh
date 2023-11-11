@@ -16,7 +16,7 @@ fi
 
 # Download MSRVTT video files
 wget --no-check-certificate -P ${1} https://www.robots.ox.ac.uk/~maxbain/frozen-in-time/data/MSRVTT.zip
-unzip x ${1}/MSRVTT.unzip ${1}
+unzip ${1}/MSRVTT.unzip ${1}
 rm ${1}/MSRVTT.zip
 
 # Download train/test splits
