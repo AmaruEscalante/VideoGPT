@@ -13,28 +13,19 @@ from videogpt import VideoData, VideoGPT, load_videogpt
 
 # Download VQ-VAE
 device = torch.device("cuda")
-
 filepath = download("1FNWJtWDTX5CcVSSlINK1ZFFHuBgjBZfB", "ucf101_stride4x4x4")
 vqvae = VQVAE.load_from_checkpoint(filepath).to(device)
+# Download Pre-trained GPT
 filepath = download("1c4CYL1joN5KDC5VYJIilFYWcDOmjWtgE", "ucf101_uncond_gpt")
 gpt = VideoGPT.load_from_checkpoint(filepath).to(device)
-gpt.eval()
-
-MAX_BATCH = 32
 
 
-def main(ckpt="bair_gpt", n_trials=1, port=23452):
+def main(ckpt="bair_gpt", n_trials=1, batch_size=16):
     torch.set_grad_enabled(False)
-
     #################### Load VideoGPT ########################################
-    # if not os.path.exists(ckpt):
-    # gpt = load_videogpt(ckpt, device=device)
-    # else:
-    # gpt = VideoGPT.load_from_checkpoint(ckpt).to(device)
     gpt.eval()
     hparams = gpt.hparams["args"]
     # print("hparams", hparams)
-    batch_size = 32
     hparams.batch_size = batch_size
     loader = VideoData(hparams).test_dataloader()
 
@@ -74,9 +65,6 @@ def all_gather(tensor):
 
 
 def eval_fvd(i3d, videogpt, loader, device):
-    # rank, size = dist.get_rank(), dist.get_world_size()  # Removed distributed parts
-    # is_root = rank == 0  # Not needed in sequential execution
-
     batch = next(iter(loader))
     batch = {k: v.to(device) for k, v in batch.items()}
 
@@ -107,11 +95,6 @@ def eval_fvd(i3d, videogpt, loader, device):
     real = real.permute(0, 2, 3, 4, 1).cpu().numpy()  # BCTHW -> BTHWC
     real = (real * 255).astype("uint8")
     real_embeddings = get_fvd_logits(real, i3d=i3d, device=device)
-
-    # fake_embeddings = all_gather(fake_embeddings)  # Not needed in sequential execution
-    # real_recon_embeddings = all_gather(real_recon_embeddings)  # Not needed in sequential execution
-    # real_embeddings = all_gather(real_embeddings)  # Not needed in sequential execution
-
     # Ensure that fake_embeddings and real_embeddings have the same number of items
     assert (
         fake_embeddings.shape[0]
@@ -124,5 +107,5 @@ def eval_fvd(i3d, videogpt, loader, device):
     return fvd.item(), fvd_star.item()
 
 
-if __name__ == "__main__":
-    main(ckpt="ufc", n_trials=2, port=12345)
+MAX_BATCH = 16
+main(ckpt="ufc", n_trials=2, batch_size=16)
