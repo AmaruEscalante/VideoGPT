@@ -108,4 +108,4 @@ def eval_fvd(i3d, videogpt, loader, device):
 
 
 MAX_BATCH = 16
-main(ckpt="ufc", n_trials=2, batch_size=16)
+main(ckpt="ufc", n_trials=5, batch_size=16)
