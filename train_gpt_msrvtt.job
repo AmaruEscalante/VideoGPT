@@ -14,4 +14,4 @@ pip install git+https://github.com/AmaruEscalante/VideoGPT.git
 pip install torch==2.1+cu118 torchvision==0.16.0+cu118 torchtext==0.16.0 -f https://download.pytorch.org/whl/torch_stable.html
 pip install tqdm requests pytorch_lightning==1.9.5 scikit-video av gradio moviepy imageio gdown h5py
 
-python scripts/train_videogpt.py --data_path datasets/msrvtt --accelerator gpu --resolution 16 --batch_size 16 --gpus 1 --auto_select_gpus true
+python scripts/train_videogpt.py --data_path datasets/msrvtt --accelerator gpu --resolution 32 --batch_size 16 --gpus 1 --auto_select_gpus true
