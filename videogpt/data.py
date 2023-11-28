@@ -22,7 +22,7 @@ class VideoDataset(data.Dataset):
     Returns BCTHW videos in the range [-0.5, 0.5] """
     exts = ['avi', 'mp4', 'webm']
 
-    def __init__(self, data_folder, sequence_length, train=True, resolution=64):
+    def __init__(self, data_folder, sequence_length, train=True, resolution=64, limit=None):
         """
         Args:
             data_folder: path to the folder with videos. The folder
@@ -39,6 +39,9 @@ class VideoDataset(data.Dataset):
         files = sum([glob.glob(osp.join(folder, '**', f'*.{ext}'), recursive=True)
                      for ext in self.exts], [])
 
+        if limit is not None:
+            files = files[:limit]  # Limit the number of files
+
         # hacky way to compute # of classes (count # of unique parent directories)
         self.classes = list(set([get_parent_dir(f) for f in files]))
         self.classes.sort()
@@ -54,6 +57,7 @@ class VideoDataset(data.Dataset):
             clips = VideoClips(files, sequence_length,
                                _precomputed_metadata=metadata)
         self._clips = clips
+
 
     @property
     def n_classes(self):
