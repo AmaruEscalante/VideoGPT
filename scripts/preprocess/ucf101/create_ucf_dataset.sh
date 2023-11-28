@@ -8,10 +8,10 @@ install_unrar_if_needed() {
         echo "unrar not found, installing locally..."
         wget https://www.rarlab.com/rar/unrarsrc-6.1.7.tar.gz
         tar -xzvf unrarsrc-6.1.7.tar.gz
-        cd unrarsrc-6.1.7
+        cd unrar
         make
         cd ..
-        export UNRAR="$PWD/unrarsrc-6.1.7/unrar"
+        export UNRAR="$PWD/unrar/unrar"
     else
         export UNRAR="unrar"
     fi
