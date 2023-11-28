@@ -23,9 +23,7 @@ class VideoDataset(data.Dataset):
 
     exts = ["avi", "mp4", "webm"]
 
-    def __init__(
-        self, data_folder, sequence_length, train=True, resolution=64, limit=None
-    ):
+    def __init__(self, data_folder, sequence_length, train=True, resolution=64):
         """
         Args:
             data_folder: path to the folder with videos. The folder
@@ -46,9 +44,6 @@ class VideoDataset(data.Dataset):
             ],
             [],
         )
-
-        if limit is not None:
-            files = files[:limit]  # Limit the number of files
 
         # hacky way to compute # of classes (count # of unique parent directories)
         self.classes = list(set([get_parent_dir(f) for f in files]))
@@ -119,9 +114,7 @@ class HDF5Dataset(data.Dataset):
     """Generic dataset for data stored in h5py as uint8 numpy arrays.
     Reads videos in {0, ..., 255} and returns in range [-0.5, 0.5]"""
 
-    def __init__(
-        self, data_file, sequence_length, train=True, resolution=64, limit=None
-    ):
+    def __init__(self, data_file, sequence_length, train=True, resolution=64):
         """
         Args:
             data_file: path to the pickled data file with the
@@ -146,9 +139,6 @@ class HDF5Dataset(data.Dataset):
         self._images = self.data[f"{self.prefix}_data"]
         self._idx = self.data[f"{self.prefix}_idx"]
         self.size = len(self._idx)
-        if limit is not None:
-            self.size = min(self.size, limit)  # Limit the dataset size
-
 
     @property
     def n_classes(self):
@@ -193,19 +183,18 @@ class VideoData(pl.LightningDataModule):
         dataset = self._dataset(True)
         return dataset.n_classes
 
-    def _dataset(self, train, limit=None):
+    def _dataset(self, train):
         Dataset = VideoDataset if osp.isdir(self.args.data_path) else HDF5Dataset
         dataset = Dataset(
             self.args.data_path,
             self.args.sequence_length,
             train=train,
             resolution=self.args.resolution,
-            limit=limit,
         )
         return dataset
 
-    def _dataloader(self, train, limit=None):
-        dataset = self._dataset(train, limit)
+    def _dataloader(self, train):
+        dataset = self._dataset(train)
         if dist.is_initialized():
             sampler = data.distributed.DistributedSampler(
                 dataset, num_replicas=dist.get_world_size(), rank=dist.get_rank()
@@ -228,5 +217,5 @@ class VideoData(pl.LightningDataModule):
     def val_dataloader(self):
         return self._dataloader(False)
 
-    def test_dataloader(self, limit=None):
-        return self._dataloader(False, limit)
+    def test_dataloader(self):
+        return self.val_dataloader()
