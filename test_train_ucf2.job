@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=10
 #SBATCH --mem=40GB
-#SBATCH --time=0:10:00
+#SBATCH --time=5:00:00
 #SBATCH --partition=debug
 #SBATCH --account=ywang234_1137
 
