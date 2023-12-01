@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=10
 #SBATCH --mem=40GB
 #SBATCH --time=1:00:00
-#SBATCH --partition=debug
+#SBATCH --partition=gpu
 #SBATCH --gres=gpu:a40:1
 #SBATCH --account=ywang234_1137
 
