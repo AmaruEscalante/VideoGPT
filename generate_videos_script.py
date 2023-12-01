@@ -53,7 +53,8 @@ def main(num_samples=16, vqvae="ucf101_stride4x4x4", gpt="ucf101_uncond_gpt"):
     # Calculate the time taken
     time_taken = end_time - start_time
     print(f"Time taken to generate {num_samples} samples: {time_taken} seconds")
-
+    print(f"Time taken per sample: {time_taken / num_samples} seconds")
+    print(f"Shape of samples", samples.shape)
     # Process samples
     b, c, t, h, w = samples.shape  # batch, channels, frames, height, width
     rsamples = samples.permute(
