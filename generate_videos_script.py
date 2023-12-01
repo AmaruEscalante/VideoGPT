@@ -24,7 +24,7 @@ args = parser.parse_args()
 
 def main(num_samples=16, vqvae="ucf101_stride4x4x4", gpt="ucf101_uncond_gpt"):
     # Download VQ-VAE
-    device = torch.device("cuda")
+    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     if vqvae == "ucf101_stride4x4x4":
         filepath = download("1FNWJtWDTX5CcVSSlINK1ZFFHuBgjBZfB", "ucf101_stride4x4x4")
         vqvae = VQVAE.load_from_checkpoint(filepath).to(device)
