@@ -1,0 +1,20 @@
+==========================================
+SLURM_JOB_ID = 17928289
+SLURM_JOB_NODELIST = b11-09
+TMPDIR = /tmp/SLURM_17928289
+==========================================
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "openmpi/4.1.4", "git", "pmix/3.2.3",
+"git/2.42.0"
+   Try: "module spider openmpi/4.1.4 git pmix/3.2.3 git/2.42.0" to see how to
+load the module(s).
+
+
+
+/var/spool/slurm/d/job17928289/slurm_script: line 13: pip: command not found
+/var/spool/slurm/d/job17928289/slurm_script: line 14: pip: command not found
+/var/spool/slurm/d/job17928289/slurm_script: line 15: pip: command not found
+Traceback (most recent call last):
+  File "scripts/train_vqvae.py", line 2, in <module>
+    import pytorch_lightning as pl
+ImportError: No module named pytorch_lightning

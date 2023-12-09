@@ -1,0 +1,598 @@
+==========================================
+SLURM_JOB_ID = 17953723
+SLURM_JOB_NODELIST = b11-13
+TMPDIR = /tmp/SLURM_17953723
+==========================================
+Defaulting to user installation because normal site-packages is not writeable
+Collecting git+https://github.com/AmaruEscalante/VideoGPT.git
+  Cloning https://github.com/AmaruEscalante/VideoGPT.git to /tmp/SLURM_17953723/pip-req-build-idgaa9u8
+  Running command git clone --filter=blob:none --quiet https://github.com/AmaruEscalante/VideoGPT.git /tmp/SLURM_17953723/pip-req-build-idgaa9u8
+  Resolved https://github.com/AmaruEscalante/VideoGPT.git to commit b441e5c158eb5d3defe6dd46d68d30e33e0106b5
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: tqdm in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (4.66.1)
+Requirement already satisfied: requests in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from VideoGPT==1.0) (2.31.0)
+Requirement already satisfied: h5py in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from VideoGPT==1.0) (3.9.0)
+Requirement already satisfied: torch in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (2.1.0+cu118)
+Requirement already satisfied: torchvision in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (0.16.0+cu118)
+Requirement already satisfied: torchtext in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (0.16.0+cpu)
+Requirement already satisfied: pytorch_lightning==1.* in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (1.9.5)
+Requirement already satisfied: scikit-video in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (1.1.11)
+Requirement already satisfied: av in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (11.0.0)
+Requirement already satisfied: gradio in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (4.7.1)
+Requirement already satisfied: moviepy in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (1.0.3)
+Requirement already satisfied: imageio in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from VideoGPT==1.0) (2.31.1)
+Requirement already satisfied: gdown in /home1/nmuthuku/.local/lib/python3.11/site-packages (from VideoGPT==1.0) (4.7.1)
+Requirement already satisfied: numpy>=1.17.2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pytorch_lightning==1.*->VideoGPT==1.0) (1.24.3)
+Requirement already satisfied: PyYAML>=5.4 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pytorch_lightning==1.*->VideoGPT==1.0) (6.0)
+Requirement already satisfied: fsspec[http]>2021.06.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.*->VideoGPT==1.0) (2023.10.0)
+Requirement already satisfied: torchmetrics>=0.7.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.*->VideoGPT==1.0) (1.2.0)
+Requirement already satisfied: packaging>=17.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pytorch_lightning==1.*->VideoGPT==1.0) (23.1)
+Requirement already satisfied: typing-extensions>=4.0.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.*->VideoGPT==1.0) (4.8.0)
+Requirement already satisfied: lightning-utilities>=0.6.0.post0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.*->VideoGPT==1.0) (0.10.0)
+Requirement already satisfied: filelock in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch->VideoGPT==1.0) (3.13.1)
+Requirement already satisfied: sympy in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch->VideoGPT==1.0) (1.12)
+Requirement already satisfied: networkx in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch->VideoGPT==1.0) (3.2.1)
+Requirement already satisfied: jinja2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from torch->VideoGPT==1.0) (3.1.2)
+Requirement already satisfied: triton==2.1.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch->VideoGPT==1.0) (2.1.0)
+Requirement already satisfied: six in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gdown->VideoGPT==1.0) (1.16.0)
+Requirement already satisfied: beautifulsoup4 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gdown->VideoGPT==1.0) (4.12.2)
+Requirement already satisfied: aiofiles<24.0,>=22.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (23.2.1)
+Requirement already satisfied: altair<6.0,>=4.2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (5.1.2)
+Requirement already satisfied: fastapi in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.104.1)
+Requirement already satisfied: ffmpy in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.3.1)
+Requirement already satisfied: gradio-client==0.7.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.7.0)
+Requirement already satisfied: httpx in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.25.1)
+Requirement already satisfied: huggingface-hub>=0.14.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.19.4)
+Requirement already satisfied: importlib-resources<7.0,>=1.3 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (6.1.1)
+Requirement already satisfied: markupsafe~=2.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (2.1.3)
+Requirement already satisfied: matplotlib~=3.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (3.7.2)
+Requirement already satisfied: orjson~=3.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (3.9.10)
+Requirement already satisfied: pandas<3.0,>=1.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (2.0.3)
+Requirement already satisfied: pillow<11.0,>=8.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (10.0.0)
+Requirement already satisfied: pydantic>=2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (2.5.2)
+Requirement already satisfied: pydub in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.25.1)
+Requirement already satisfied: python-multipart in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.0.6)
+Requirement already satisfied: semantic-version~=2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (2.10.0)
+Requirement already satisfied: tomlkit==0.12.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.12.0)
+Requirement already satisfied: typer[all]<1.0,>=0.9 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.9.0)
+Requirement already satisfied: uvicorn>=0.14.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio->VideoGPT==1.0) (0.24.0.post1)
+Requirement already satisfied: websockets<12.0,>=10.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio-client==0.7.0->gradio->VideoGPT==1.0) (11.0.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests->VideoGPT==1.0) (3.2.0)
+Requirement already satisfied: idna<4,>=2.5 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests->VideoGPT==1.0) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests->VideoGPT==1.0) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests->VideoGPT==1.0) (2023.5.7)
+Requirement already satisfied: decorator<5.0,>=4.0.2 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from moviepy->VideoGPT==1.0) (4.4.2)
+Requirement already satisfied: proglog<=1.0.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from moviepy->VideoGPT==1.0) (0.1.10)
+Requirement already satisfied: imageio-ffmpeg>=0.2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from moviepy->VideoGPT==1.0) (0.4.9)
+Requirement already satisfied: scipy in /home1/nmuthuku/.local/lib/python3.11/site-packages (from scikit-video->VideoGPT==1.0) (1.11.4)
+Requirement already satisfied: torchdata==0.7.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torchtext->VideoGPT==1.0) (0.7.0)
+Requirement already satisfied: jsonschema>=3.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from altair<6.0,>=4.2.0->gradio->VideoGPT==1.0) (4.18.2)
+Requirement already satisfied: toolz in /home1/nmuthuku/.local/lib/python3.11/site-packages (from altair<6.0,>=4.2.0->gradio->VideoGPT==1.0) (0.12.0)
+Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from fsspec[http]>2021.06.0->pytorch_lightning==1.*->VideoGPT==1.0) (3.8.4)
+Requirement already satisfied: setuptools in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from imageio-ffmpeg>=0.2.0->moviepy->VideoGPT==1.0) (65.5.0)
+Requirement already satisfied: contourpy>=1.0.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio->VideoGPT==1.0) (1.1.0)
+Requirement already satisfied: cycler>=0.10 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio->VideoGPT==1.0) (0.11.0)
+Requirement already satisfied: fonttools>=4.22.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio->VideoGPT==1.0) (4.41.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio->VideoGPT==1.0) (1.4.4)
+Requirement already satisfied: pyparsing<3.1,>=2.3.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio->VideoGPT==1.0) (3.0.9)
+Requirement already satisfied: python-dateutil>=2.7 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio->VideoGPT==1.0) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pandas<3.0,>=1.0->gradio->VideoGPT==1.0) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pandas<3.0,>=1.0->gradio->VideoGPT==1.0) (2023.3)
+Requirement already satisfied: annotated-types>=0.4.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pydantic>=2.0->gradio->VideoGPT==1.0) (0.6.0)
+Requirement already satisfied: pydantic-core==2.14.5 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pydantic>=2.0->gradio->VideoGPT==1.0) (2.14.5)
+Requirement already satisfied: click<9.0.0,>=7.1.1 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from typer[all]<1.0,>=0.9->gradio->VideoGPT==1.0) (8.1.7)
+Requirement already satisfied: colorama<0.5.0,>=0.4.3 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from typer[all]<1.0,>=0.9->gradio->VideoGPT==1.0) (0.4.6)
+Requirement already satisfied: shellingham<2.0.0,>=1.3.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from typer[all]<1.0,>=0.9->gradio->VideoGPT==1.0) (1.5.4)
+Requirement already satisfied: rich<14.0.0,>=10.11.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from typer[all]<1.0,>=0.9->gradio->VideoGPT==1.0) (13.7.0)
+Requirement already satisfied: h11>=0.8 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from uvicorn>=0.14.0->gradio->VideoGPT==1.0) (0.14.0)
+Requirement already satisfied: soupsieve>1.2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from beautifulsoup4->gdown->VideoGPT==1.0) (2.4.1)
+Requirement already satisfied: anyio<4.0.0,>=3.7.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from fastapi->gradio->VideoGPT==1.0) (3.7.1)
+Requirement already satisfied: starlette<0.28.0,>=0.27.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from fastapi->gradio->VideoGPT==1.0) (0.27.0)
+Requirement already satisfied: httpcore in /home1/nmuthuku/.local/lib/python3.11/site-packages (from httpx->gradio->VideoGPT==1.0) (1.0.2)
+Requirement already satisfied: sniffio in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from httpx->gradio->VideoGPT==1.0) (1.3.0)
+Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from requests->VideoGPT==1.0) (1.7.1)
+Requirement already satisfied: mpmath>=0.19 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from sympy->torch->VideoGPT==1.0) (1.3.0)
+Requirement already satisfied: attrs>=17.3.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.*->VideoGPT==1.0) (23.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.*->VideoGPT==1.0) (6.0.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.*->VideoGPT==1.0) (4.0.2)
+Requirement already satisfied: yarl<2.0,>=1.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.*->VideoGPT==1.0) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.*->VideoGPT==1.0) (1.4.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.*->VideoGPT==1.0) (1.3.1)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio->VideoGPT==1.0) (2023.6.1)
+Requirement already satisfied: referencing>=0.28.4 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio->VideoGPT==1.0) (0.29.1)
+Requirement already satisfied: rpds-py>=0.7.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio->VideoGPT==1.0) (0.8.10)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio->VideoGPT==1.0) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio->VideoGPT==1.0) (2.15.1)
+Requirement already satisfied: mdurl~=0.1 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio->VideoGPT==1.0) (0.1.2)
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
+Defaulting to user installation because normal site-packages is not writeable
+Looking in links: https://download.pytorch.org/whl/torch_stable.html
+Requirement already satisfied: torch==2.1+cu118 in /home1/nmuthuku/.local/lib/python3.11/site-packages (2.1.0+cu118)
+Requirement already satisfied: torchvision==0.16.0+cu118 in /home1/nmuthuku/.local/lib/python3.11/site-packages (0.16.0+cu118)
+Requirement already satisfied: torchtext==0.16.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (0.16.0+cpu)
+Requirement already satisfied: filelock in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch==2.1+cu118) (3.13.1)
+Requirement already satisfied: typing-extensions in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch==2.1+cu118) (4.8.0)
+Requirement already satisfied: sympy in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch==2.1+cu118) (1.12)
+Requirement already satisfied: networkx in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch==2.1+cu118) (3.2.1)
+Requirement already satisfied: jinja2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from torch==2.1+cu118) (3.1.2)
+Requirement already satisfied: fsspec in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch==2.1+cu118) (2023.10.0)
+Requirement already satisfied: triton==2.1.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch==2.1+cu118) (2.1.0)
+Requirement already satisfied: numpy in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from torchvision==0.16.0+cu118) (1.24.3)
+Requirement already satisfied: requests in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from torchvision==0.16.0+cu118) (2.31.0)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from torchvision==0.16.0+cu118) (10.0.0)
+Requirement already satisfied: tqdm in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torchtext==0.16.0) (4.66.1)
+Requirement already satisfied: torchdata==0.7.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torchtext==0.16.0) (0.7.0)
+Requirement already satisfied: urllib3>=1.25 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from torchdata==0.7.0->torchtext==0.16.0) (1.26.16)
+Requirement already satisfied: MarkupSafe>=2.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from jinja2->torch==2.1+cu118) (2.1.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests->torchvision==0.16.0+cu118) (3.2.0)
+Requirement already satisfied: idna<4,>=2.5 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests->torchvision==0.16.0+cu118) (3.4)
+Requirement already satisfied: certifi>=2017.4.17 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests->torchvision==0.16.0+cu118) (2023.5.7)
+Requirement already satisfied: mpmath>=0.19 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from sympy->torch==2.1+cu118) (1.3.0)
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: tqdm in /home1/nmuthuku/.local/lib/python3.11/site-packages (4.66.1)
+Requirement already satisfied: requests in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (2.31.0)
+Requirement already satisfied: pytorch_lightning==1.9.5 in /home1/nmuthuku/.local/lib/python3.11/site-packages (1.9.5)
+Requirement already satisfied: scikit-video in /home1/nmuthuku/.local/lib/python3.11/site-packages (1.1.11)
+Requirement already satisfied: av in /home1/nmuthuku/.local/lib/python3.11/site-packages (11.0.0)
+Requirement already satisfied: gradio in /home1/nmuthuku/.local/lib/python3.11/site-packages (4.7.1)
+Requirement already satisfied: moviepy in /home1/nmuthuku/.local/lib/python3.11/site-packages (1.0.3)
+Requirement already satisfied: imageio in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (2.31.1)
+Requirement already satisfied: gdown in /home1/nmuthuku/.local/lib/python3.11/site-packages (4.7.1)
+Requirement already satisfied: h5py in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (3.9.0)
+Requirement already satisfied: numpy>=1.17.2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pytorch_lightning==1.9.5) (1.24.3)
+Requirement already satisfied: torch>=1.10.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.9.5) (2.1.0+cu118)
+Requirement already satisfied: PyYAML>=5.4 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pytorch_lightning==1.9.5) (6.0)
+Requirement already satisfied: fsspec[http]>2021.06.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.9.5) (2023.10.0)
+Requirement already satisfied: torchmetrics>=0.7.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.9.5) (1.2.0)
+Requirement already satisfied: packaging>=17.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pytorch_lightning==1.9.5) (23.1)
+Requirement already satisfied: typing-extensions>=4.0.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.9.5) (4.8.0)
+Requirement already satisfied: lightning-utilities>=0.6.0.post0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pytorch_lightning==1.9.5) (0.10.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests) (3.2.0)
+Requirement already satisfied: idna<4,>=2.5 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from requests) (2023.5.7)
+Requirement already satisfied: pillow in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from scikit-video) (10.0.0)
+Requirement already satisfied: scipy in /home1/nmuthuku/.local/lib/python3.11/site-packages (from scikit-video) (1.11.4)
+Requirement already satisfied: aiofiles<24.0,>=22.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (23.2.1)
+Requirement already satisfied: altair<6.0,>=4.2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (5.1.2)
+Requirement already satisfied: fastapi in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.104.1)
+Requirement already satisfied: ffmpy in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.3.1)
+Requirement already satisfied: gradio-client==0.7.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.7.0)
+Requirement already satisfied: httpx in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.25.1)
+Requirement already satisfied: huggingface-hub>=0.14.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.19.4)
+Requirement already satisfied: importlib-resources<7.0,>=1.3 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (6.1.1)
+Requirement already satisfied: jinja2<4.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gradio) (3.1.2)
+Requirement already satisfied: markupsafe~=2.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gradio) (2.1.3)
+Requirement already satisfied: matplotlib~=3.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gradio) (3.7.2)
+Requirement already satisfied: orjson~=3.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (3.9.10)
+Requirement already satisfied: pandas<3.0,>=1.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gradio) (2.0.3)
+Requirement already satisfied: pydantic>=2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (2.5.2)
+Requirement already satisfied: pydub in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.25.1)
+Requirement already satisfied: python-multipart in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.0.6)
+Requirement already satisfied: semantic-version~=2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (2.10.0)
+Requirement already satisfied: tomlkit==0.12.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.12.0)
+Requirement already satisfied: typer[all]<1.0,>=0.9 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.9.0)
+Requirement already satisfied: uvicorn>=0.14.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio) (0.24.0.post1)
+Requirement already satisfied: websockets<12.0,>=10.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gradio-client==0.7.0->gradio) (11.0.3)
+Requirement already satisfied: decorator<5.0,>=4.0.2 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from moviepy) (4.4.2)
+Requirement already satisfied: proglog<=1.0.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from moviepy) (0.1.10)
+Requirement already satisfied: imageio-ffmpeg>=0.2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from moviepy) (0.4.9)
+Requirement already satisfied: filelock in /home1/nmuthuku/.local/lib/python3.11/site-packages (from gdown) (3.13.1)
+Requirement already satisfied: six in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gdown) (1.16.0)
+Requirement already satisfied: beautifulsoup4 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from gdown) (4.12.2)
+Requirement already satisfied: jsonschema>=3.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from altair<6.0,>=4.2.0->gradio) (4.18.2)
+Requirement already satisfied: toolz in /home1/nmuthuku/.local/lib/python3.11/site-packages (from altair<6.0,>=4.2.0->gradio) (0.12.0)
+Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from fsspec[http]>2021.06.0->pytorch_lightning==1.9.5) (3.8.4)
+Requirement already satisfied: setuptools in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from imageio-ffmpeg>=0.2.0->moviepy) (65.5.0)
+Requirement already satisfied: contourpy>=1.0.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio) (1.1.0)
+Requirement already satisfied: cycler>=0.10 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio) (0.11.0)
+Requirement already satisfied: fonttools>=4.22.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio) (4.41.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio) (1.4.4)
+Requirement already satisfied: pyparsing<3.1,>=2.3.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio) (3.0.9)
+Requirement already satisfied: python-dateutil>=2.7 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from matplotlib~=3.0->gradio) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pandas<3.0,>=1.0->gradio) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from pandas<3.0,>=1.0->gradio) (2023.3)
+Requirement already satisfied: annotated-types>=0.4.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pydantic>=2.0->gradio) (0.6.0)
+Requirement already satisfied: pydantic-core==2.14.5 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from pydantic>=2.0->gradio) (2.14.5)
+Requirement already satisfied: sympy in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch>=1.10.0->pytorch_lightning==1.9.5) (1.12)
+Requirement already satisfied: networkx in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch>=1.10.0->pytorch_lightning==1.9.5) (3.2.1)
+Requirement already satisfied: triton==2.1.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from torch>=1.10.0->pytorch_lightning==1.9.5) (2.1.0)
+Requirement already satisfied: click<9.0.0,>=7.1.1 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from typer[all]<1.0,>=0.9->gradio) (8.1.7)
+Requirement already satisfied: colorama<0.5.0,>=0.4.3 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from typer[all]<1.0,>=0.9->gradio) (0.4.6)
+Requirement already satisfied: shellingham<2.0.0,>=1.3.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from typer[all]<1.0,>=0.9->gradio) (1.5.4)
+Requirement already satisfied: rich<14.0.0,>=10.11.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from typer[all]<1.0,>=0.9->gradio) (13.7.0)
+Requirement already satisfied: h11>=0.8 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from uvicorn>=0.14.0->gradio) (0.14.0)
+Requirement already satisfied: soupsieve>1.2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from beautifulsoup4->gdown) (2.4.1)
+Requirement already satisfied: anyio<4.0.0,>=3.7.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from fastapi->gradio) (3.7.1)
+Requirement already satisfied: starlette<0.28.0,>=0.27.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from fastapi->gradio) (0.27.0)
+Requirement already satisfied: httpcore in /home1/nmuthuku/.local/lib/python3.11/site-packages (from httpx->gradio) (1.0.2)
+Requirement already satisfied: sniffio in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from httpx->gradio) (1.3.0)
+Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from requests) (1.7.1)
+Requirement already satisfied: attrs>=17.3.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.9.5) (23.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.9.5) (6.0.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.9.5) (4.0.2)
+Requirement already satisfied: yarl<2.0,>=1.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.9.5) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.9.5) (1.4.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch_lightning==1.9.5) (1.3.1)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio) (2023.6.1)
+Requirement already satisfied: referencing>=0.28.4 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio) (0.29.1)
+Requirement already satisfied: rpds-py>=0.7.1 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from jsonschema>=3.0->altair<6.0,>=4.2.0->gradio) (0.8.10)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/python-3.11.3-gl2q3yz/lib/python3.11/site-packages (from rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio) (2.15.1)
+Requirement already satisfied: mpmath>=0.19 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from sympy->torch>=1.10.0->pytorch_lightning==1.9.5) (1.3.0)
+Requirement already satisfied: mdurl~=0.1 in /home1/nmuthuku/.local/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich<14.0.0,>=10.11.0->typer[all]<1.0,>=0.9->gradio) (0.1.2)
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
+  0%|          | 0/64 [00:00<?, ?it/s]  2%|▏         | 1/64 [00:00<00:28,  2.21it/s] 27%|██▋       | 17/64 [00:00<00:01, 39.69it/s] 52%|█████▏    | 33/64 [00:00<00:00, 69.56it/s] 77%|███████▋  | 49/64 [00:00<00:00, 92.53it/s]100%|██████████| 64/64 [00:00<00:00, 74.37it/s]
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 11.3.0 (GCC)
+  configuration: --prefix=/spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/ffmpeg-6.0-tfupvcj --enable-pic --cc=/spack/2206/spack-0.18.0/lib/spack/env/gcc/gcc --cxx=/spack/2206/spack-0.18.0/lib/spack/env/gcc/g++ --disable-libxcb --disable-libxcb-shape --disable-libxcb-shm --disable-libxcb-xfixes --disable-xlib --disable-libfontconfig --disable-libfreetype --disable-libfribidi --enable-bzlib --enable-gpl --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libx264 --enable-nonfree --enable-openssl --enable-shared --enable-version3 --enable-libzmq --disable-libssh --disable-libwebp --disable-lzma --enable-libsnappy --enable-sdl2 --enable-libaom
+  libavutil      58.  2.100 / 58.  2.100
+  libavcodec     60.  3.100 / 60.  3.100
+  libavformat    60.  3.100 / 60.  3.100
+  libavdevice    60.  1.100 / 60.  1.100
+  libavfilter     9.  3.100 /  9.  3.100
+  libswscale      7.  1.100 /  7.  1.100
+  libswresample   4. 10.100 /  4. 10.100
+  libpostproc    57.  1.100 / 57.  1.100
+Input #0, image2, from 'frames/video_0/frame_%05d.png':
+  Duration: 00:00:00.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc), 32x32 [SAR 3937:3937 DAR 1:1], 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x261a080] using SAR=1/1
+[libx264 @ 0x261a080] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x261a080] profile High, level 1.0, 4:2:0, 8-bit
+[libx264 @ 0x261a080] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_videos/output_video_0.mp4':
+  Metadata:
+    encoder         : Lavf60.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 32x32 [SAR 1:1 DAR 1:1], q=2-31, 5 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc60.3.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    frame=    4 fps=0.0 q=23.0 Lsize=       2kB time=00:00:00.20 bitrate=  94.0kbits/s speed=34.4x    
+video:1kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 63.693378%
+[libx264 @ 0x261a080] frame I:1     Avg QP:22.00  size:   304
+[libx264 @ 0x261a080] frame P:1     Avg QP:25.00  size:   117
+[libx264 @ 0x261a080] frame B:2     Avg QP:25.00  size:   163
+[libx264 @ 0x261a080] consecutive B-frames: 25.0%  0.0% 75.0%  0.0%
+[libx264 @ 0x261a080] mb I  I16..4:  0.0% 100.0%  0.0%
+[libx264 @ 0x261a080] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4: 25.0% 25.0% 50.0%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 0x261a080] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 75.0% 12.5%  6.2%  direct:12.5%  skip: 0.0%  L0:26.7% L1:26.7% BI:46.7%
+[libx264 @ 0x261a080] 8x8 transform intra:100.0% inter:66.7%
+[libx264 @ 0x261a080] coded y,uvDC,uvAC intra: 100.0% 100.0% 100.0% inter: 100.0% 91.7% 8.3%
+[libx264 @ 0x261a080] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 38% 38% 12%  0%  0%  0%  0%  0% 12%
+[libx264 @ 0x261a080] i8c dc,h,v,p: 25% 50% 25%  0%
+[libx264 @ 0x261a080] Weighted P-Frames: Y:100.0% UV:0.0%
+[libx264 @ 0x261a080] ref B L0: 50.0% 50.0%
+[libx264 @ 0x261a080] kb/s:7.47
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 11.3.0 (GCC)
+  configuration: --prefix=/spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/ffmpeg-6.0-tfupvcj --enable-pic --cc=/spack/2206/spack-0.18.0/lib/spack/env/gcc/gcc --cxx=/spack/2206/spack-0.18.0/lib/spack/env/gcc/g++ --disable-libxcb --disable-libxcb-shape --disable-libxcb-shm --disable-libxcb-xfixes --disable-xlib --disable-libfontconfig --disable-libfreetype --disable-libfribidi --enable-bzlib --enable-gpl --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libx264 --enable-nonfree --enable-openssl --enable-shared --enable-version3 --enable-libzmq --disable-libssh --disable-libwebp --disable-lzma --enable-libsnappy --enable-sdl2 --enable-libaom
+  libavutil      58.  2.100 / 58.  2.100
+  libavcodec     60.  3.100 / 60.  3.100
+  libavformat    60.  3.100 / 60.  3.100
+  libavdevice    60.  1.100 / 60.  1.100
+  libavfilter     9.  3.100 /  9.  3.100
+  libswscale      7.  1.100 /  7.  1.100
+  libswresample   4. 10.100 /  4. 10.100
+  libpostproc    57.  1.100 / 57.  1.100
+Input #0, image2, from 'frames/video_1/frame_%05d.png':
+  Duration: 00:00:00.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc), 32x32 [SAR 3937:3937 DAR 1:1], 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x2408b40] using SAR=1/1
+[libx264 @ 0x2408b40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x2408b40] profile High, level 1.0, 4:2:0, 8-bit
+[libx264 @ 0x2408b40] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_videos/output_video_1.mp4':
+  Metadata:
+    encoder         : Lavf60.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 32x32 [SAR 1:1 DAR 1:1], q=2-31, 5 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc60.3.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    frame=    4 fps=0.0 q=23.0 Lsize=       2kB time=00:00:00.20 bitrate=  94.8kbits/s speed=33.5x    
+video:1kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 62.774727%
+[libx264 @ 0x2408b40] frame I:1     Avg QP:22.00  size:   335
+[libx264 @ 0x2408b40] frame P:1     Avg QP:25.00  size:   116
+[libx264 @ 0x2408b40] frame B:2     Avg QP:25.25  size:   158
+[libx264 @ 0x2408b40] consecutive B-frames: 25.0%  0.0% 75.0%  0.0%
+[libx264 @ 0x2408b40] mb I  I16..4:  0.0% 50.0% 50.0%
+[libx264 @ 0x2408b40] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4: 25.0% 75.0%  0.0%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 0x2408b40] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 50.0% 37.5%  0.0%  direct:12.5%  skip: 0.0%  L0:42.9% L1:35.7% BI:21.4%
+[libx264 @ 0x2408b40] 8x8 transform intra:50.0% inter:75.0%
+[libx264 @ 0x2408b40] coded y,uvDC,uvAC intra: 100.0% 100.0% 100.0% inter: 93.8% 91.7% 8.3%
+[libx264 @ 0x2408b40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 62% 25%  0%  0%  0%  0%  0%  0% 12%
+[libx264 @ 0x2408b40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu:  6% 44% 28%  3%  3%  3%  3%  0%  9%
+[libx264 @ 0x2408b40] i8c dc,h,v,p: 25% 50% 25%  0%
+[libx264 @ 0x2408b40] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x2408b40] ref B L0: 55.6% 44.4%
+[libx264 @ 0x2408b40] kb/s:7.68
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 11.3.0 (GCC)
+  configuration: --prefix=/spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/ffmpeg-6.0-tfupvcj --enable-pic --cc=/spack/2206/spack-0.18.0/lib/spack/env/gcc/gcc --cxx=/spack/2206/spack-0.18.0/lib/spack/env/gcc/g++ --disable-libxcb --disable-libxcb-shape --disable-libxcb-shm --disable-libxcb-xfixes --disable-xlib --disable-libfontconfig --disable-libfreetype --disable-libfribidi --enable-bzlib --enable-gpl --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libx264 --enable-nonfree --enable-openssl --enable-shared --enable-version3 --enable-libzmq --disable-libssh --disable-libwebp --disable-lzma --enable-libsnappy --enable-sdl2 --enable-libaom
+  libavutil      58.  2.100 / 58.  2.100
+  libavcodec     60.  3.100 / 60.  3.100
+  libavformat    60.  3.100 / 60.  3.100
+  libavdevice    60.  1.100 / 60.  1.100
+  libavfilter     9.  3.100 /  9.  3.100
+  libswscale      7.  1.100 /  7.  1.100
+  libswresample   4. 10.100 /  4. 10.100
+  libpostproc    57.  1.100 / 57.  1.100
+Input #0, image2, from 'frames/video_2/frame_%05d.png':
+  Duration: 00:00:00.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc), 32x32 [SAR 3937:3937 DAR 1:1], 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x22de040] using SAR=1/1
+[libx264 @ 0x22de040] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x22de040] profile High, level 1.0, 4:2:0, 8-bit
+[libx264 @ 0x22de040] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_videos/output_video_2.mp4':
+  Metadata:
+    encoder         : Lavf60.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 32x32 [SAR 1:1 DAR 1:1], q=2-31, 5 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc60.3.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    frame=    4 fps=0.0 q=23.0 Lsize=       2kB time=00:00:00.20 bitrate=  90.5kbits/s speed=39.5x    
+video:1kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 67.753891%
+[libx264 @ 0x22de040] frame I:1     Avg QP:23.00  size:   309
+[libx264 @ 0x22de040] frame P:1     Avg QP:25.50  size:   102
+[libx264 @ 0x22de040] frame B:2     Avg QP:26.00  size:   125
+[libx264 @ 0x22de040] consecutive B-frames: 25.0%  0.0% 75.0%  0.0%
+[libx264 @ 0x22de040] mb I  I16..4:  0.0%  0.0% 100.0%
+[libx264 @ 0x22de040] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0% 50.0% 50.0%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 0x22de040] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 50.0%  0.0% 21.9%  direct:25.0%  skip: 0.0%  L0:47.8% L1:30.4% BI:21.7%
+[libx264 @ 0x22de040] 8x8 transform intra:0.0% inter:91.7%
+[libx264 @ 0x22de040] coded y,uvDC,uvAC intra: 100.0% 100.0% 100.0% inter: 91.7% 91.7% 0.0%
+[libx264 @ 0x22de040] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 17% 31% 16%  3%  0%  8%  8%  8%  9%
+[libx264 @ 0x22de040] i8c dc,h,v,p: 25% 50% 25%  0%
+[libx264 @ 0x22de040] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x22de040] ref B L0: 73.7% 26.3%
+[libx264 @ 0x22de040] kb/s:6.61
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 11.3.0 (GCC)
+  configuration: --prefix=/spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/ffmpeg-6.0-tfupvcj --enable-pic --cc=/spack/2206/spack-0.18.0/lib/spack/env/gcc/gcc --cxx=/spack/2206/spack-0.18.0/lib/spack/env/gcc/g++ --disable-libxcb --disable-libxcb-shape --disable-libxcb-shm --disable-libxcb-xfixes --disable-xlib --disable-libfontconfig --disable-libfreetype --disable-libfribidi --enable-bzlib --enable-gpl --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libx264 --enable-nonfree --enable-openssl --enable-shared --enable-version3 --enable-libzmq --disable-libssh --disable-libwebp --disable-lzma --enable-libsnappy --enable-sdl2 --enable-libaom
+  libavutil      58.  2.100 / 58.  2.100
+  libavcodec     60.  3.100 / 60.  3.100
+  libavformat    60.  3.100 / 60.  3.100
+  libavdevice    60.  1.100 / 60.  1.100
+  libavfilter     9.  3.100 /  9.  3.100
+  libswscale      7.  1.100 /  7.  1.100
+  libswresample   4. 10.100 /  4. 10.100
+  libpostproc    57.  1.100 / 57.  1.100
+Input #0, image2, from 'frames/video_3/frame_%05d.png':
+  Duration: 00:00:00.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc), 32x32 [SAR 3937:3937 DAR 1:1], 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x771b40] using SAR=1/1
+[libx264 @ 0x771b40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x771b40] profile High, level 1.0, 4:2:0, 8-bit
+[libx264 @ 0x771b40] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_videos/output_video_3.mp4':
+  Metadata:
+    encoder         : Lavf60.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 32x32 [SAR 1:1 DAR 1:1], q=2-31, 5 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc60.3.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    frame=    4 fps=0.0 q=23.0 Lsize=       2kB time=00:00:00.20 bitrate=  94.0kbits/s speed=37.4x    
+video:1kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 63.604733%
+[libx264 @ 0x771b40] frame I:1     Avg QP:22.00  size:   333
+[libx264 @ 0x771b40] frame P:1     Avg QP:25.00  size:   116
+[libx264 @ 0x771b40] frame B:2     Avg QP:25.00  size:   150
+[libx264 @ 0x771b40] consecutive B-frames: 25.0%  0.0% 75.0%  0.0%
+[libx264 @ 0x771b40] mb I  I16..4:  0.0% 25.0% 75.0%
+[libx264 @ 0x771b40] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4: 25.0% 50.0% 25.0%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 0x771b40] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 62.5% 12.5% 12.5%  direct:12.5%  skip: 0.0%  L0:39.3% L1:25.0% BI:35.7%
+[libx264 @ 0x771b40] 8x8 transform intra:25.0% inter:100.0%
+[libx264 @ 0x771b40] coded y,uvDC,uvAC intra: 100.0% 100.0% 100.0% inter: 100.0% 83.3% 16.7%
+[libx264 @ 0x771b40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 50% 25%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x771b40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu:  4% 54% 10%  2%  4%  8%  8%  0%  8%
+[libx264 @ 0x771b40] i8c dc,h,v,p: 50% 50%  0%  0%
+[libx264 @ 0x771b40] Weighted P-Frames: Y:100.0% UV:0.0%
+[libx264 @ 0x771b40] ref B L0: 52.0% 48.0%
+[libx264 @ 0x771b40] kb/s:7.49
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 11.3.0 (GCC)
+  configuration: --prefix=/spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/ffmpeg-6.0-tfupvcj --enable-pic --cc=/spack/2206/spack-0.18.0/lib/spack/env/gcc/gcc --cxx=/spack/2206/spack-0.18.0/lib/spack/env/gcc/g++ --disable-libxcb --disable-libxcb-shape --disable-libxcb-shm --disable-libxcb-xfixes --disable-xlib --disable-libfontconfig --disable-libfreetype --disable-libfribidi --enable-bzlib --enable-gpl --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libx264 --enable-nonfree --enable-openssl --enable-shared --enable-version3 --enable-libzmq --disable-libssh --disable-libwebp --disable-lzma --enable-libsnappy --enable-sdl2 --enable-libaom
+  libavutil      58.  2.100 / 58.  2.100
+  libavcodec     60.  3.100 / 60.  3.100
+  libavformat    60.  3.100 / 60.  3.100
+  libavdevice    60.  1.100 / 60.  1.100
+  libavfilter     9.  3.100 /  9.  3.100
+  libswscale      7.  1.100 /  7.  1.100
+  libswresample   4. 10.100 /  4. 10.100
+  libpostproc    57.  1.100 / 57.  1.100
+Input #0, image2, from 'frames/video_4/frame_%05d.png':
+  Duration: 00:00:00.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc), 32x32 [SAR 3937:3937 DAR 1:1], 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x91c080] using SAR=1/1
+[libx264 @ 0x91c080] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x91c080] profile High, level 1.0, 4:2:0, 8-bit
+[libx264 @ 0x91c080] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_videos/output_video_4.mp4':
+  Metadata:
+    encoder         : Lavf60.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 32x32 [SAR 1:1 DAR 1:1], q=2-31, 5 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc60.3.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    frame=    4 fps=0.0 q=23.0 Lsize=       2kB time=00:00:00.20 bitrate=  89.6kbits/s speed=37.8x    
+video:1kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 68.981133%
+[libx264 @ 0x91c080] frame I:1     Avg QP:23.00  size:   320
+[libx264 @ 0x91c080] frame P:1     Avg QP:26.00  size:    65
+[libx264 @ 0x91c080] frame B:2     Avg QP:25.50  size:   126
+[libx264 @ 0x91c080] consecutive B-frames: 25.0%  0.0% 75.0%  0.0%
+[libx264 @ 0x91c080] mb I  I16..4:  0.0%  0.0% 100.0%
+[libx264 @ 0x91c080] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0% 25.0% 75.0%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 0x91c080] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 37.5%  0.0%  3.1%  direct:62.5%  skip: 0.0%  L0:69.2% L1:30.8% BI: 0.0%
+[libx264 @ 0x91c080] 8x8 transform intra:0.0% inter:75.0%
+[libx264 @ 0x91c080] coded y,uvDC,uvAC intra: 100.0% 100.0% 100.0% inter: 81.2% 58.3% 0.0%
+[libx264 @ 0x91c080] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu:  6% 31% 28%  3%  0%  2%  8%  6% 16%
+[libx264 @ 0x91c080] i8c dc,h,v,p: 50% 50%  0%  0%
+[libx264 @ 0x91c080] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x91c080] ref B L0: 91.7%  8.3%
+[libx264 @ 0x91c080] kb/s:6.37
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 11.3.0 (GCC)
+  configuration: --prefix=/spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/ffmpeg-6.0-tfupvcj --enable-pic --cc=/spack/2206/spack-0.18.0/lib/spack/env/gcc/gcc --cxx=/spack/2206/spack-0.18.0/lib/spack/env/gcc/g++ --disable-libxcb --disable-libxcb-shape --disable-libxcb-shm --disable-libxcb-xfixes --disable-xlib --disable-libfontconfig --disable-libfreetype --disable-libfribidi --enable-bzlib --enable-gpl --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libx264 --enable-nonfree --enable-openssl --enable-shared --enable-version3 --enable-libzmq --disable-libssh --disable-libwebp --disable-lzma --enable-libsnappy --enable-sdl2 --enable-libaom
+  libavutil      58.  2.100 / 58.  2.100
+  libavcodec     60.  3.100 / 60.  3.100
+  libavformat    60.  3.100 / 60.  3.100
+  libavdevice    60.  1.100 / 60.  1.100
+  libavfilter     9.  3.100 /  9.  3.100
+  libswscale      7.  1.100 /  7.  1.100
+  libswresample   4. 10.100 /  4. 10.100
+  libpostproc    57.  1.100 / 57.  1.100
+Input #0, image2, from 'frames/video_5/frame_%05d.png':
+  Duration: 00:00:00.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc), 32x32 [SAR 3937:3937 DAR 1:1], 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x1260c40] using SAR=1/1
+[libx264 @ 0x1260c40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x1260c40] profile High, level 1.0, 4:2:0, 8-bit
+[libx264 @ 0x1260c40] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_videos/output_video_5.mp4':
+  Metadata:
+    encoder         : Lavf60.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 32x32 [SAR 1:1 DAR 1:1], q=2-31, 5 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc60.3.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    frame=    4 fps=0.0 q=23.0 Lsize=       2kB time=00:00:00.20 bitrate=  95.7kbits/s speed=34.5x    
+video:1kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 61.840324%
+[libx264 @ 0x1260c40] frame I:1     Avg QP:22.00  size:   325
+[libx264 @ 0x1260c40] frame P:1     Avg QP:25.00  size:   116
+[libx264 @ 0x1260c40] frame B:2     Avg QP:25.00  size:   174
+[libx264 @ 0x1260c40] consecutive B-frames: 25.0%  0.0% 75.0%  0.0%
+[libx264 @ 0x1260c40] mb I  I16..4:  0.0%  0.0% 100.0%
+[libx264 @ 0x1260c40] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4: 50.0% 50.0%  0.0%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 0x1260c40] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 50.0% 12.5%  9.4%  direct:25.0%  skip: 0.0%  L0:73.9% L1:17.4% BI: 8.7%
+[libx264 @ 0x1260c40] 8x8 transform intra:0.0% inter:83.3%
+[libx264 @ 0x1260c40] coded y,uvDC,uvAC intra: 100.0% 100.0% 100.0% inter: 100.0% 91.7% 8.3%
+[libx264 @ 0x1260c40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 14% 42%  8%  0%  2%  9%  8%  8%  9%
+[libx264 @ 0x1260c40] i8c dc,h,v,p: 25% 50% 25%  0%
+[libx264 @ 0x1260c40] Weighted P-Frames: Y:100.0% UV:0.0%
+[libx264 @ 0x1260c40] ref B L0: 54.5% 45.5%
+[libx264 @ 0x1260c40] kb/s:7.90
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 11.3.0 (GCC)
+  configuration: --prefix=/spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/ffmpeg-6.0-tfupvcj --enable-pic --cc=/spack/2206/spack-0.18.0/lib/spack/env/gcc/gcc --cxx=/spack/2206/spack-0.18.0/lib/spack/env/gcc/g++ --disable-libxcb --disable-libxcb-shape --disable-libxcb-shm --disable-libxcb-xfixes --disable-xlib --disable-libfontconfig --disable-libfreetype --disable-libfribidi --enable-bzlib --enable-gpl --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libx264 --enable-nonfree --enable-openssl --enable-shared --enable-version3 --enable-libzmq --disable-libssh --disable-libwebp --disable-lzma --enable-libsnappy --enable-sdl2 --enable-libaom
+  libavutil      58.  2.100 / 58.  2.100
+  libavcodec     60.  3.100 / 60.  3.100
+  libavformat    60.  3.100 / 60.  3.100
+  libavdevice    60.  1.100 / 60.  1.100
+  libavfilter     9.  3.100 /  9.  3.100
+  libswscale      7.  1.100 /  7.  1.100
+  libswresample   4. 10.100 /  4. 10.100
+  libpostproc    57.  1.100 / 57.  1.100
+Input #0, image2, from 'frames/video_6/frame_%05d.png':
+  Duration: 00:00:00.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc), 32x32 [SAR 3937:3937 DAR 1:1], 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x20bb040] using SAR=1/1
+[libx264 @ 0x20bb040] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x20bb040] profile High, level 1.0, 4:2:0, 8-bit
+[libx264 @ 0x20bb040] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_videos/output_video_6.mp4':
+  Metadata:
+    encoder         : Lavf60.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 32x32 [SAR 1:1 DAR 1:1], q=2-31, 5 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc60.3.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    frame=    4 fps=0.0 q=23.0 Lsize=       2kB time=00:00:00.20 bitrate=  92.6kbits/s speed=38.9x    
+video:1kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 65.285713%
+[libx264 @ 0x20bb040] frame I:1     Avg QP:22.00  size:   323
+[libx264 @ 0x20bb040] frame P:1     Avg QP:25.00  size:    99
+[libx264 @ 0x20bb040] frame B:2     Avg QP:25.25  size:   145
+[libx264 @ 0x20bb040] consecutive B-frames: 25.0%  0.0% 75.0%  0.0%
+[libx264 @ 0x20bb040] mb I  I16..4:  0.0%  0.0% 100.0%
+[libx264 @ 0x20bb040] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4: 50.0% 25.0% 25.0%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 0x20bb040] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 62.5%  0.0% 21.9%  direct:12.5%  skip: 0.0%  L0:92.6% L1: 3.7% BI: 3.7%
+[libx264 @ 0x20bb040] 8x8 transform intra:0.0% inter:83.3%
+[libx264 @ 0x20bb040] coded y,uvDC,uvAC intra: 100.0% 100.0% 100.0% inter: 87.5% 66.7% 16.7%
+[libx264 @ 0x20bb040] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu:  5% 41% 19%  6%  5%  2%  6%  3% 14%
+[libx264 @ 0x20bb040] i8c dc,h,v,p: 50% 50%  0%  0%
+[libx264 @ 0x20bb040] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x20bb040] ref B L0: 44.4% 55.6%
+[libx264 @ 0x20bb040] kb/s:7.12
+ffmpeg version 6.0 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 11.3.0 (GCC)
+  configuration: --prefix=/spack/2206/apps/linux-centos7-x86_64_v3/gcc-11.3.0/ffmpeg-6.0-tfupvcj --enable-pic --cc=/spack/2206/spack-0.18.0/lib/spack/env/gcc/gcc --cxx=/spack/2206/spack-0.18.0/lib/spack/env/gcc/g++ --disable-libxcb --disable-libxcb-shape --disable-libxcb-shm --disable-libxcb-xfixes --disable-xlib --disable-libfontconfig --disable-libfreetype --disable-libfribidi --enable-bzlib --enable-gpl --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libx264 --enable-nonfree --enable-openssl --enable-shared --enable-version3 --enable-libzmq --disable-libssh --disable-libwebp --disable-lzma --enable-libsnappy --enable-sdl2 --enable-libaom
+  libavutil      58.  2.100 / 58.  2.100
+  libavcodec     60.  3.100 / 60.  3.100
+  libavformat    60.  3.100 / 60.  3.100
+  libavdevice    60.  1.100 / 60.  1.100
+  libavfilter     9.  3.100 /  9.  3.100
+  libswscale      7.  1.100 /  7.  1.100
+  libswresample   4. 10.100 /  4. 10.100
+  libpostproc    57.  1.100 / 57.  1.100
+Input #0, image2, from 'frames/video_7/frame_%05d.png':
+  Duration: 00:00:00.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc), 32x32 [SAR 3937:3937 DAR 1:1], 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x1266040] using SAR=1/1
+[libx264 @ 0x1266040] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x1266040] profile High, level 1.0, 4:2:0, 8-bit
+[libx264 @ 0x1266040] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_videos/output_video_7.mp4':
+  Metadata:
+    encoder         : Lavf60.3.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 32x32 [SAR 1:1 DAR 1:1], q=2-31, 5 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc60.3.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0kB time=-577014:32:22.77 bitrate=  -0.0kbits/s speed=N/A    frame=    4 fps=0.0 q=23.0 Lsize=       2kB time=00:00:00.20 bitrate=  91.7kbits/s speed=38.2x    
+video:1kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 66.328011%
+[libx264 @ 0x1266040] frame I:1     Avg QP:22.50  size:   319
+[libx264 @ 0x1266040] frame P:1     Avg QP:25.50  size:    85
+[libx264 @ 0x1266040] frame B:2     Avg QP:25.25  size:   143
+[libx264 @ 0x1266040] consecutive B-frames: 25.0%  0.0% 75.0%  0.0%
+[libx264 @ 0x1266040] mb I  I16..4:  0.0% 25.0% 75.0%
+[libx264 @ 0x1266040] mb P  I16..4:  0.0%  0.0%  0.0%  P16..4:  0.0% 25.0% 75.0%  0.0%  0.0%    skip: 0.0%
+[libx264 @ 0x1266040] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 25.0% 50.0%  9.4%  direct:12.5%  skip: 0.0%  L0:59.3% L1:40.7% BI: 0.0%
+[libx264 @ 0x1266040] 8x8 transform intra:25.0% inter:75.0%
+[libx264 @ 0x1266040] coded y,uvDC,uvAC intra: 100.0% 100.0% 100.0% inter: 89.6% 100.0% 0.0%
+[libx264 @ 0x1266040] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 75% 25%  0%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x1266040] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 12% 31% 19%  6%  6%  2%  8%  2% 12%
+[libx264 @ 0x1266040] i8c dc,h,v,p: 50% 50%  0%  0%
+[libx264 @ 0x1266040] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x1266040] ref B L0: 64.7% 35.3%
+[libx264 @ 0x1266040] kb/s:6.90
+Time taken to generate 8 samples: 1.6079590320587158 seconds
+Videos saved.

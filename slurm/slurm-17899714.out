@@ -1,0 +1,16 @@
+==========================================
+SLURM_JOB_ID = 17899714
+SLURM_JOB_NODELIST = b11-11
+TMPDIR = /tmp/SLURM_17899714
+==========================================
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "python/3.11.2", "openmpi/4.1.4",
+"pmix/3.2.3"
+   Try: "module spider python/3.11.2 openmpi/4.1.4 pmix/3.2.3" to see how to
+load the module(s).
+
+
+
+/var/spool/slurm/d/job17899714/slurm_script: line 13: pip: command not found
+/var/spool/slurm/d/job17899714/slurm_script: line 14: pip: command not found
+/var/spool/slurm/d/job17899714/slurm_script: line 16: python3: command not found
